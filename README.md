@@ -111,7 +111,7 @@ Build your SaaS product faster with [React SaaS Boilerplate](https://nextlessjs.
 
 ### Getting started
 
-Run the following command on your local environment:
+Run the following command on your local environment (for example, in [Warp](https://go.warp.dev/nextjs-bp)):
 
 ```shell
 git clone --depth=1 https://github.com/ixartz/React-Native-Boilerplate.git my-project-name
