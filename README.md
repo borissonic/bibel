@@ -135,7 +135,7 @@ Testing is an important part of the development process and often the neglected 
 
 #### Unit Testing
 
-To run the unit tests, run the following command:
+To run the unit tests, run the following command (for example, in [Warp](https://go.warp.dev/nextjs-bp)):
 
 ```shell
 npm run test
