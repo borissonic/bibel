@@ -103,6 +103,32 @@ const HomePage = () => {
         <Ionicons name="book-outline" size={20} color="#000000" />
       </TouchableOpacity>
 
+      {/* Top-right Settings icon */}
+      <TouchableOpacity
+        onPress={() => router.push('/settings')}
+        style={{
+          position: 'absolute',
+          top: insets.top + 8,
+          right: 16,
+          zIndex: 10,
+          width: 36,
+          height: 36,
+          borderRadius: 18,
+          backgroundColor: '#FFFFFF',
+          alignItems: 'center',
+          justifyContent: 'center',
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.15,
+          shadowRadius: 6,
+          elevation: 3,
+        }}
+        accessibilityRole="button"
+        accessibilityLabel="Open Settings"
+      >
+        <Ionicons name="settings-outline" size={18} color="#000000" />
+      </TouchableOpacity>
+
       <SafeAreaView style={{ flex: 1 }}>
         <GestureHandlerRootView style={{ flex: 1, paddingHorizontal: 20 }}>
           {/* Header - Smaller, more refined */}
@@ -139,7 +165,8 @@ const HomePage = () => {
               contentContainerStyle={{ paddingBottom: 80 }}
             >
               {/* Today's Journey - First, in a box */}
-              <View
+              <TouchableOpacity
+                onPress={() => router.push('/streak')}
                 style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
                   borderRadius: 24,
@@ -279,7 +306,7 @@ const HomePage = () => {
                     Review
                   </Text>
                 </TouchableOpacity>
-              </View>
+              </TouchableOpacity>
 
               {/* Today's Topics - Second, horizontally scrollable */}
               <View style={{ marginBottom: 16 }}>
