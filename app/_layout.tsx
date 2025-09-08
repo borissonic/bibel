@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { NativeWindStyleSheet } from 'nativewind';
 import { useEffect } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 NativeWindStyleSheet.setOutput({
   default: 'native',
@@ -27,5 +28,9 @@ export default function Layout() {
     return null;
   }
 
-  return <Stack />;
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack />
+    </GestureHandlerRootView>
+  );
 }
